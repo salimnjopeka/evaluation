@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-[#fcfcee] text-[#3a3e59] tracking-wide
+  }
+html{
+  font-family: 'Raleway', sans-serif;
+}
+  h1, h2, h3,h4,h5,h6 {
+    @apply font-bold
+  }
+   h1{
+    @apply text-4xl sm:text-5xl md:text-6xl
+   }
+   h{
+    @apply text-3xl sm:text-4xl 
+   }
+   li{
+    @apply cursor-pointer
+   }
+   button{
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-slate-800 text-white 
+   }
+}
+
+.para{
+  border-bottom: 2 solid #333;
+}
