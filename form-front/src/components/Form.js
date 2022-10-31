@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import Axios from '../Api'
 
 
 
 
 const Form = () => {
   const [Values, setValues] = useState({
-    name_1: "",
+  name_1: "",
   email: "",
   school:"",
   age:"",
@@ -14,16 +15,17 @@ const Form = () => {
   sexe: "",
   level: true,
   first: "",
-        two: "",
-        three: "",
-        four: "",
-        five: "",
-        six: "",
-        seven:"",
-        eight:"",
-        nine:"",
-        ten:"",
+  two: "",
+  three: "",
+  four: "",
+  five: "",
+  six: "",
+  seven:"",
+  eight:"",
+  nine:"",
+  ten:"",
   })
+  
   const changeHandler = (e) =>{
     const {name ,value} = e.target;
     setValues({
@@ -32,11 +34,14 @@ const Form = () => {
     });
   }
  
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     // alert(Values)
     // console.log(Values);
     e.preventDefault();
-    axios.post("/api/forms")
+   await Axios.post("/api/forms", {
+      data: Values
+    }).then(res => console.log(res.data))
+    .catch(err => console.log(err))
   }
   return (
     <>

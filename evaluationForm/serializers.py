@@ -21,5 +21,6 @@ class FormSerializer(serializers.ModelSerializer):
             'The_material_was_presented_in_an_organized_manner',
             'The_instructor_was_knowledgeable_on_the_topic',
             'I_would_be_interested_in_attending_a_follow_up_more_Advanced_programs_on_this_same_subject',
-            'Given_the_topic_was_this_program','In_your_opinion_was_this_program'
+            'Given_the_topic_was_this_program',
+            'In_your_opinion_was_this_program'
             ]

@@ -14,16 +14,16 @@ class SatisfactionForm(models.Model):
     )
     School = models.CharField(max_length=200)
     leveloptions = [
-        ('Beginner','Beginner'),
-        ('Intermediate','Intermediate'),
-        ('Advanced','Advanced')
+        ('A','Beginner'),
+        ('B','Intermediate'),
+        ('C','Advanced')
     ]
     Level = models.CharField(
         max_length=20,
         choices = leveloptions,
         default = 'Beginner'
         )
-    Contact = models.CharField(max_length=100)
+    Contact = models.IntegerField(max_length=10)
     Email = models.CharField(max_length=100)
     options=[
         ('1', 'Strongly Agree'),
